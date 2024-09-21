@@ -69,7 +69,7 @@ public class Main {
         // Sort the products based on weight in ascending order
         Sort(products);
 
-        // Get the Id of items
+        // Get the Number of items
         int itemNumber = items.length;
 
         // Initialize a table to store maximum value for each weight limit
@@ -77,7 +77,7 @@ public class Main {
         int weight;
         int price;
 
-        // fill the DP table based on the logic(table[i][w] holds the maximum value we can achieve with the first i items, given a capacity of w).
+        // fill the table based on the logic(table[i][w] holds the maximum value we can achieve with the first i items, given a capacity of w).
         for (int i = 1; i <= itemNumber; i++) {
             weight = (int) products.get(i - 1).weight; // Get weight of current product
             price = products.get(i - 1).price; // Get price of current product
@@ -99,7 +99,7 @@ public class Main {
         // Backtracking to find the selected items based on the filled table
         for (int i = itemNumber; i > 0; i--) {
             if (table[i][maxWeight] != table[i - 1][maxWeight]) {
-                // If the value in the DP table differs from the previous row, it means the item was included
+                // If the value in the table differs from the previous row, it means the item was included
                 bestItems.add(products.get(i - 1).id); // Add product Id to the result
                 maxWeight -= (int) products.get(i - 1).weight; // Decrease the remaining weight
             }
