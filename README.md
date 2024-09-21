@@ -1,16 +1,16 @@
-# Knapsack Problem Solver
+# Interview Problem
 
-This project implements a solution to the **Knapsack Problem** using dynamic programming in Java. The program allows you to enter a set of products with weights and values, and it calculates the optimal selection of products that maximize the total value without exceeding a given weight limit.
+This project implements a solution to the **Interview Problem** in Java. The program allows you to enter a set of products with weights and values, and it calculates the optimal selection of products that maximize the total value without exceeding a given weight limit.
 
 ## Features
 
-- **Knapsack Solver**: Solves the knapsack problem using dynamic programming, ensuring that the products selected have the maximum possible value within the weight constraint.
+- **Solver**: Solves the knapsack problem using dynamic programming, ensuring that the products selected have the maximum possible value within the weight constraint.
 - **Product Sorting**: Sorts products based on their weight in ascending order.
 - **Regex Parsing**: Extracts product information from a formatted string using regular expressions.
 
 ## Project Structure
 
-- **Main.java**: Contains the logic for solving the knapsack problem and sorting products by weight.
+- **Main.java**: Contains the logic for solving the problem.
 - **Products.java**: Represents a product with its weight, price, and unique identifier.
 - **MainTest.java**: Unit tests for the `Pack` and `Sort` methods using JUnit 5.
 
@@ -41,9 +41,3 @@ This project implements a solution to the **Knapsack Problem** using dynamic pro
 
 The project uses **JUnit 5** for unit testing. The `MainTest` class tests the core methods of the project (`Pack` and `Sort`).
 
-### Running Tests with Maven
-
-If you are using Maven, you can run the tests by executing:
-
-```bash
-mvn test
